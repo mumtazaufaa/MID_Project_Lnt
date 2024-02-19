@@ -1,0 +1,255 @@
+/* style.css */
+
+/* Warna Palet */
+:root {
+  --primary-color: #1F2544; /* Warna ungu primer */
+  --secondary-color: #474F7A; /* Warna ungu sekunder */
+  --accent-color: #ffd700; /* Warna kuning accent */
+  --bg-color: #f4f4f4; /* Warna latar belakang */
+  --text-color: #81689D; /* Warna teks */
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: var(--primary-color);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-content img {
+  max-width: 200px;
+  margin-right: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 100%;
+  margin-top: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  text-align: center;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  width: calc(33.333% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.8em;
+}
+
+.about-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.about-content ul li {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content img {
+    margin: 0 auto 20px;
+  }
+
+  .about-content ul li {
+    margin-bottom: 10px;
+  }
+
+  .portfolio-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-item {
+    width: calc(100% - 20px);
+  }
+}
+
+@keyframes slideInleft{
+  from{
+    transform: translateX(-300px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+  
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.heading-1{
+  animation-name: slideInleft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+
+  transform: translateX(-150px);
+
+}
+
+.animation2 {
+  animation-name: fadeIn; /* Gunakan nama animasi fadeIn */
+  animation-duration: 1s; /* Durasi animasi */
+  animation-timing-function: ease-in; /* Fungsi waktu animasi */
+  animation-delay: 1s; /* Jeda animasi */
+  animation-iteration-count: 1; /* Jumlah iterasi animasi */
+  animation-direction: normal; /* Arah animasi */
+  animation-fill-mode: none; /* Mode pengisian animasi */
+}
+
+.lineUp {
+  animation: 2s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
